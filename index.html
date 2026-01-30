@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Valentine 2026 - Quà Tặng Cao Cấp Nhật Bản</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Dancing+Script:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            background-color: #000;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            position: relative;
+            scroll-behavior: smooth;
+        }
+
+        /* Background image cho toàn trang */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            z-index: -2;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            33% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+
+            66% {
+                transform: translateY(10px) rotate(-5deg);
+            }
+        }
+
+        @keyframes superShake {
+
+            0%,
+            100% {
+                transform: translateX(0) translateY(0) rotate(0deg);
+            }
+
+            10% {
+                transform: translateX(-10px) translateY(-5px) rotate(-5deg);
+            }
+
+            20% {
+                transform: translateX(10px) translateY(5px) rotate(5deg);
+            }
+
+            30% {
+                transform: translateX(-8px) translateY(-8px) rotate(-3deg);
+            }
+
+            40% {
+                transform: translateX(8px) translateY(8px) rotate(3deg);
+            }
+
+            50% {
+                transform: translateX(-5px) translateY(-10px) rotate(-2deg);
+            }
+
+            60% {
+                transform: translateX(5px) translateY(10px) rotate(2deg);
+            }
+
+            70% {
+                transform: translateX(-3px) translateY(-5px) rotate(-1deg);
+            }
+
+            80% {
+                transform: translateX(3px) translateY(5px) rotate(1deg);
+            }
+        }
+
+        @keyframes extremePulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 0, 100, 0.7);
+            }
+
+            50% {
+                transform: scale(1.15);
+                box-shadow: 0 0 0 20px rgba(255, 0, 100, 0);
+            }
+        }
+
+        @keyframes countdownFlash {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.2);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(255, 0, 100, 0.7);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(255, 0, 100, 1);
+            }
+        }
+
+        /* Container chính */
+        .container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.85);
+            box-shadow: 0 0 50px rgba(255, 0, 100, 0.3);
+            min-height: 100vh;
+        }
+
+        /* Header với background image */
+        .header {
+            text-align: center;
+            padding: 25px 15px 20px;
+            position: relative;
+            background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(120, 0, 120, 0.3));
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #ff0064, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-shadow: 0 0 20px rgba(255, 0, 100, 0.5);
+            animation: heartbeat 2s infinite;
+        }
+
+        .sub-logo {
+            font-size: 16px;
+            color: #ffccff;
+            font-weight: 500;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .valentine-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 48px;
+            background: linear-gradient(90deg, #ff0064, #ff8c00, #ff0064);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 20px 0 15px;
+            text-shadow: 0 0 30px rgba(255, 0, 100, 0.7);
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .year {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 600;
+            background: rgba(255, 0, 100, 0.3);
+            display: inline-block;
+            padding: 8px 25px;
+            border-radius: 30px;
+            border: 2px solid #ff0064;
+            backdrop-filter: blur(10px);
+            animation: bounce 3s infinite;
+        }
+
+        /* Hero Post Image với ảnh trên, text dưới */
+        .post-hero {
+            position: relative;
+            margin: 20px 15px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            animation: fadeIn 1.2s ease-out 0.2s both;
+        }
+
+        .post-image-container {
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+
+        .post-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .post-content {
+            background: rgba(10, 0, 30, 0.9);
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .post-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffccff;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .post-subtitle {
+            font-size: 18px;
+            color: #ffccff;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            animation: slideInRight 1s ease-out;
+        }
+
+        /* Button dưới hero và post */
+        .hero-button {
+            margin: 20px 15px 30px;
+            text-align: center;
+        }
+
+        .btn-inbox-hero {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 22px 40px;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 22px;
+            text-decoration: none;
+            background: linear-gradient(90deg, #ff0064, #ff8c00, #ff0064);
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 15px 35px rgba(255, 0, 100, 0.7);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: superShake 0.8s infinite alternate, extremePulse 2s infinite;
+        }
+
+        .btn-inbox-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, #ff8c00, #ff0064, #ff8c00);
+            background-size: 200% auto;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            animation: shimmer 3s infinite linear;
+        }
+
+        .btn-inbox-hero:hover::before {
+            opacity: 1;
+        }
+
+        .btn-inbox-hero:hover {
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 0 20px 50px rgba(255, 0, 100, 1);
+        }
+
+        .btn-icon {
+            font-size: 28px;
+        }
+
+        /* Rating Section */
+        .rating-section {
+            margin: 30px 15px;
+            background: rgba(20, 0, 40, 0.9);
+            border-radius: 25px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(255, 0, 100, 0.3);
+            animation: fadeIn 1s ease-out 0.4s both;
+            backdrop-filter: blur(10px);
+        }
+
+        .rating-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .rating-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .rating-stars {
+            color: #ffd700;
+            font-size: 24px;
+            animation: blink 1.5s infinite;
+        }
+
+        .rating-score {
+            font-size: 42px;
+            font-weight: 900;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+        }
+
+        .rating-total {
+            font-size: 18px;
+            color: #ffccff;
+        }
+
+        .sold-count {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ff0064;
+            background: rgba(255, 0, 100, 0.15);
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: 2px solid #ff0064;
+            animation: bounce 2s infinite;
+        }
+
+        .sold-count i {
+            margin-right: 10px;
+        }
+
+        /* Customer Reviews */
+        .reviews-section {
+            margin-top: 30px;
+        }
+
+        .reviews-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #ffccff;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .reviews-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff0064, #ff8c00);
+            animation: shimmer 2s infinite linear;
+        }
+
+        .review-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .review-item {
+            background: rgba(40, 0, 80, 0.7);
+            border-radius: 20px;
+            padding: 20px;
+            border-left: 5px solid #ff0064;
+            animation: fadeIn 0.8s ease-out;
+            backdrop-filter: blur(5px);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff0064, #ff8c00);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 22px;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        .review-name {
+            font-weight: 700;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .review-stars {
+            color: #ffd700;
+            font-size: 16px;
+            margin-left: auto;
+        }
+
+        .review-text {
+            color: #ffccff;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .review-time {
+            font-size: 14px;
+            color: #ff99cc;
+            text-align: right;
+        }
+
+        /* CTA Button Section */
+        .cta-section {
+            text-align: center;
+            margin: 40px 15px;
+            padding: 40px 25px;
+            background: linear-gradient(135deg, rgba(255, 0, 100, 0.3), rgba(255, 140, 0, 0.3));
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            animation: superShake 1s infinite alternate, extremePulse 3s infinite;
+            box-shadow: 0 20px 50px rgba(255, 0, 100, 0.5);
+        }
+
+        .cta-section::before {
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, #ff0064, #ff8c00, #ff0064, #ff8c00);
+            border-radius: inherit;
+            z-index: -1;
+            animation: shimmer 3s infinite linear;
+        }
+
+        .cta-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 48px;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+            animation: heartbeat 3s infinite;
+        }
+
+        .cta-text {
+            font-size: 20px;
+            color: #ffccff;
+            margin-bottom: 35px;
+            line-height: 1.6;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 25px 45px;
+            border-radius: 60px;
+            font-weight: 900;
+            font-size: 24px;
+            text-decoration: none;
+            background: linear-gradient(90deg, #ff0064, #ff8c00);
+            color: white;
+            box-shadow: 0 20px 40px rgba(255, 0, 100, 0.7);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: superShake 0.7s infinite alternate, extremePulse 1.5s infinite;
+        }
+
+        .cta-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, #ff8c00, #ff0064);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .cta-button:hover::before {
+            opacity: 1;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 25px 60px rgba(255, 0, 100, 1);
+        }
+
+        .cta-icon {
+            font-size: 32px;
+        }
+
+        /* Countdown Timer chính */
+        .countdown-section {
+            margin: 40px 15px;
+            background: rgba(10, 0, 30, 0.95);
+            border-radius: 30px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            border: 3px solid rgba(255, 0, 100, 0.5);
+            animation: fadeIn 1s ease-out 0.8s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .countdown-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #ff0064;
+            margin-bottom: 25px;
+            text-shadow: 0 0 20px rgba(255, 0, 100, 0.7);
+            animation: blink 2s infinite;
+        }
+
+        .countdown-subtitle {
+            color: #ffccff;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 0, 100, 0.2);
+            border-radius: 20px;
+            padding: 20px 15px;
+            min-width: 85px;
+            border: 2px solid rgba(255, 0, 100, 0.7);
+            animation: countdownFlash 1s infinite;
+            backdrop-filter: blur(5px);
+        }
+
+        .countdown-value {
+            font-size: 48px;
+            font-weight: 900;
+            color: #ffd700;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 14px;
+            color: #ffccff;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Countdown Fixed ở dưới màn hình - không rung lắc */
+        .countdown-fixed {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, #ff0064, #ff8c00);
+            color: white;
+            padding: 15px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -5px 30px rgba(255, 0, 100, 0.8);
+            animation: pulseGlow 2s infinite;
+            border-top: 3px solid white;
+        }
+
+        .countdown-fixed-text {
+            font-weight: 700;
+            font-size: 18px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .countdown-fixed-timer {
+            display: flex;
+            gap: 10px;
+        }
+
+        .countdown-fixed-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            padding: 8px 5px;
+            min-width: 50px;
+            border: 2px solid white;
+        }
+
+        .countdown-fixed-value {
+            font-size: 24px;
+            font-weight: 900;
+            color: white;
+            line-height: 1;
+        }
+
+        .countdown-fixed-label {
+            font-size: 10px;
+            color: #ffccff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Image Gallery - 10 ảnh với background image */
+        .gallery-section {
+            margin: 40px 15px;
+            animation: fadeIn 1s ease-out 1s both;
+        }
+
+        .gallery-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #ffccff;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .gallery-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff0064, #ff8c00);
+            animation: shimmer 2s infinite linear;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+            animation: float 6s infinite ease-in-out;
+            animation-delay: calc(var(--delay) * 0.5s);
+            height: 180px;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 40px rgba(255, 0, 100, 0.7);
+            z-index: 10;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            padding: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-large {
+            grid-column: span 2;
+            height: 220px;
+        }
+
+        .gallery-single {
+            grid-column: span 2;
+            height: 630px;
+        }
+
+        /* Promotion Section */
+        .promotion-section {
+            margin: 40px 15px;
+            background: linear-gradient(135deg, rgba(255, 0, 100, 0.2), rgba(255, 140, 0, 0.2));
+            border-radius: 30px;
+            padding: 35px 25px;
+            text-align: center;
+            border: 3px solid rgba(255, 0, 100, 0.5);
+            animation: fadeIn 1s ease-out 1.2s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promotion-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .promotion-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #ffd700;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+            animation: blink 2s infinite;
+        }
+
+        .promotion-list {
+            text-align: left;
+            margin-top: 25px;
+        }
+
+        .promotion-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            border-left: 5px solid #ff0064;
+            animation: fadeIn 0.8s ease-out;
+            backdrop-filter: blur(5px);
+        }
+
+        .promotion-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ff0064, #ff8c00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            margin-right: 20px;
+            flex-shrink: 0;
+            animation: bounce 2s infinite;
+        }
+
+        .promotion-text {
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Button Messenger link */
+        .messenger-button {
+            position: fixed;
+            right: 20px;
+            bottom: 90px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #0084ff, #00c6ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0, 132, 255, 0.7);
+            z-index: 999;
+            animation: bounce 2s infinite, pulseGlow 3s infinite;
+            transition: all 0.3s ease;
+        }
+
+        .messenger-button:hover {
+            transform: scale(1.2) rotate(15deg);
+            box-shadow: 0 15px 40px rgba(0, 132, 255, 1);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px 100px;
+            color: #ffccff;
+            font-size: 16px;
+            border-top: 3px solid rgba(255, 0, 100, 0.5);
+            margin-top: 20px;
+            background: rgba(10, 0, 30, 0.9);
+            position: relative;
+        }
+
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            background: linear-gradient(90deg, #ff0064, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 0 20px rgba(255, 0, 100, 0.5);
+        }
+
+        .footer-text {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #ffccff;
+            font-size: 17px;
+        }
+
+        .contact-info {
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            border: 2px solid rgba(255, 0, 100, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-title {
+            color: #ffccff;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .contact-detail {
+            color: #fff;
+            font-size: 17px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff0064, #ff8c00);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 28px;
+            animation: bounce 3s infinite;
+            animation-delay: calc(var(--delay) * 0.3s);
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2) rotate(15deg);
+            box-shadow: 0 10px 30px rgba(255, 0, 100, 0.8);
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #ff99cc;
+        }
+
+        /* Hiệu ứng nền */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 0, 100, 0.5);
+            font-size: 30px;
+            animation: float 10s infinite linear;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0;
+            }
+
+            .post-image-container {
+                height: 250px;
+            }
+
+            .post-title {
+                font-size: 24px;
+            }
+
+            .valentine-title {
+                font-size: 42px;
+            }
+
+            .cta-title {
+                font-size: 42px;
+            }
+
+            .countdown-item {
+                min-width: 75px;
+                padding: 15px 10px;
+            }
+
+            .countdown-value {
+                font-size: 42px;
+            }
+
+            .gallery-item {
+                height: 160px;
+            }
+
+            .gallery-large {
+                height: 200px;
+            }
+
+            .gallery-single {
+                height: 540px;
+            }
+
+            .btn-inbox-hero,
+            .cta-button {
+                padding: 20px 30px;
+                font-size: 20px;
+            }
+
+            .countdown-fixed {
+                padding: 12px;
+            }
+
+            .countdown-fixed-text {
+                font-size: 16px;
+            }
+
+            .messenger-button {
+                width: 60px;
+                height: 60px;
+                font-size: 32px;
+                bottom: 80px;
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .valentine-title {
+                font-size: 36px;
+            }
+
+            .post-title {
+                font-size: 22px;
+            }
+
+            .rating-score {
+                font-size: 36px;
+            }
+
+            .btn-inbox-hero,
+            .cta-button {
+                padding: 18px 25px;
+                font-size: 18px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-large,
+            .gallery-single {
+                grid-column: span 1;
+            }
+
+            .messenger-button {
+                width: 50px;
+                height: 50px;
+                font-size: 28px;
+                bottom: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="floating-hearts" id="hearts-container"></div>
+
+    <!-- Button Messenger link -->
+    <a href="https://m.me/100571501815980" class="messenger-button" target="_blank">
+        <i class="fab fa-facebook-messenger"></i>
+    </a>
+
+    <!-- Fixed Countdown ở dưới màn hình - không rung lắc -->
+    <div class="countdown-fixed" id="fixed-countdown">
+        <div class="countdown-fixed-text">
+            <i class="fas fa-fire"></i> KHUYẾN MÃI KẾT THÚC SAU:
+        </div>
+        <div class="countdown-fixed-timer">
+            <div class="countdown-fixed-item">
+                <div class="countdown-fixed-value" id="fixed-hours">01</div>
+                <div class="countdown-fixed-label">GIỜ</div>
+            </div>
+            <div class="countdown-fixed-item">
+                <div class="countdown-fixed-value" id="fixed-minutes">00</div>
+                <div class="countdown-fixed-label">PHÚT</div>
+            </div>
+            <div class="countdown-fixed-item">
+                <div class="countdown-fixed-value" id="fixed-seconds">00</div>
+                <div class="countdown-fixed-label">GIÂY</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header với background image -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">THAIANHP</div>
+                <div class="sub-logo">QUÀ TẶNG TẠI NHẬT BẢN</div>
+                <h1 class="valentine-title">Valentine 2026</h1>
+                <div class="year">2026</div>
+            </div>
+        </header>
+
+        <!-- Hero Post Image với ảnh trên, text dưới -->
+        <section class="post-hero">
+            <div class="post-image-container">
+                <img src="/images/Artboard 13@4x-100.jpg" alt="Valentine 2026" class="post-image">
+            </div>
+            <div class="post-content">
+                <h2 class="post-title">SET QUÀ VALENTINE ĐỘC QUYỀN 2026</h2>
+                <p class="post-subtitle">Bộ sưu tập Valentine giới hạn - Chỉ 99 set trên toàn Nhật Bản. Sản phẩm được
+                    thiết kế riêng cho Valentine 2026 - Trao tặng tình yêu đích thực</p>
+            </div>
+        </section>
+
+        <!-- Button dưới hero với animation cực đại -->
+        <div class="hero-button">
+            <a href="https://m.me/100571501815980" class="btn-inbox-hero">
+                <i class="fab fa-facebook-messenger btn-icon"></i>
+                INBOX NGAY CHO CHÚNG TÔI
+            </a>
+        </div>
+
+
+
+        <!-- Gallery ảnh sản phẩm - 10 ảnh với background image -->
+        <section class="gallery-section">
+            <h2 class="gallery-title">BỘ SƯU TẬP VALENTINE 2026</h2>
+
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-single" style="--delay:5">
+                    <img src="/images/Artboard 28 copy@4x-100.jpg" alt="SET TÚI VÍ CAO CẤP" class="gallery-img">
+                    <div class="gallery-overlay">SET TÚI VÍ CAO CẤP</div>
+                </div>
+
+                <!-- Ảnh 1-4: 4 ảnh thành 2 hàng (2x2) -->
+                <div class="gallery-item" style="--delay:1">
+                    <img src="/images/Artboard 5 copy 2@2x-100.jpg " alt="SET Dây chuyền vòng tay 1" class="gallery-img">
+                    <div class="gallery-overlay">SET Dây chuyền vòng tay 1</div>
+                </div>
+                <div class="gallery-item" style="--delay:2">
+                    <img src="/images/Artboard 5 copy@2x-100.jpg" alt="SET Dây chuyền vòng tay 2" class="gallery-img">
+                    <div class="gallery-overlay">SET Dây chuyền vòng tay 2</div>
+                </div>
+                <!-- <div class="gallery-item" style="--delay:3">
+                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Hộp quà sang trọng" class="gallery-img">
+                    <div class="gallery-overlay">HỘP QUÀ SANG TRỌNG</div>
+                </div>
+                <div class="gallery-item" style="--delay:4">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Set trang sức" class="gallery-img">
+                    <div class="gallery-overlay">SET TRANG SỨC</div>
+                </div> -->
+
+                <!-- Ảnh 5: ảnh lớn 1 dòng -->
+
+                <!-- Ảnh 6: ảnh lớn 1 dòng -->
+                <div class="gallery-item gallery-single" style="--delay:6">
+                    <img src="/images/3.png" alt="SET Túi ví cao cấp xanh ngọc" class="gallery-img">
+                    <div class="gallery-overlay">SET Túi ví cao cấp xanh ngọc</div>
+                </div>
+
+                <!-- Ảnh 7: ảnh lớn 1 dòng -->
+                <div class="gallery-item gallery-single" style="--delay:7">
+                    <img src="/images/4 2.png" alt="SET Dây chuyền vòng tay 3" class="gallery-img">
+                    <div class="gallery-overlay">SET Dây chuyền vòng tay 3</div>
+                </div>
+
+                <!-- Ảnh 8: ảnh lớn 1 dòng -->
+                <div class="gallery-item gallery-single" style="--delay:8">
+                    <img src="/images/4.png" alt="Quà tặng kèm đặc biệt" class="gallery-img">
+                    <div class="gallery-overlay">QUÀ TẶNG KÈM ĐẶC BIỆT</div>
+                </div>
+
+                <!-- Ảnh 9: ảnh lớn 1 dòng -->
+                <div class="gallery-item gallery-single" style="--delay:9">
+                    <img src="/images/7.png" alt="Set vòng tay cao cấp" class="gallery-img">
+                    <div class="gallery-overlay">SET VÒNG TAY CAO CẤP</div>
+                </div>
+
+                <!-- Ảnh 10: ảnh lớn 1 dòng -->
+                <div class="gallery-item gallery-single" style="--delay:10">
+                    <img src="/images/8.png" alt="Quà tặng ý nghĩa Valentine" class="gallery-img">
+                    <div class="gallery-overlay">QUÀ TẶNG Ý NGHĨA VALENTINE</div>
+                </div>
+
+                <!-- Ảnh 11: ảnh lớn 1 dòng -->
+                <div class="gallery-item gallery-single" style="--delay:10">
+                    <img src="/images/Túi xanh.png" alt="Quà tặng ý nghĩa Valentine" class="gallery-img">
+                    <div class="gallery-overlay">QUÀ TẶNG Ý NGHĨA VALENTINE</div>
+                </div>
+            </div>
+        </section>
+        <!-- Countdown khuyến mãi 1 tiếng -->
+        <section class="countdown-section">
+            <h2 class="countdown-title">KHUYẾN MÃI KẾT THÚC TRONG</h2>
+            <p class="countdown-subtitle">Ưu đãi Valentine 2026 chỉ áp dụng trong 1 giờ tới!</p>
+
+            <div class="countdown-timer" id="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-value" id="hours">01</div>
+                    <div class="countdown-label">GIỜ</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="minutes">00</div>
+                    <div class="countdown-label">PHÚT</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="seconds">00</div>
+                    <div class="countdown-label">GIÂY</div>
+                </div>
+            </div>
+
+            <p
+                style="color:#ff0064; font-weight:800; margin-top:20px; font-size:22px; text-shadow: 0 0 10px rgba(255,0,100,0.5);">
+                <i class="fas fa-exclamation-triangle"></i> Chỉ còn 99 set cuối cùng với giá ưu đãi
+            </p>
+        </section>
+        <!-- Nút Inbox với animation mạnh -->
+        <section class="cta-section">
+            <h2 class="cta-title">ĐỪNG BỎ LỠ CƠ HỘI!</h2>
+            <p class="cta-text">Chỉ còn 99 set Valentine 2026 giới hạn. Inbox ngay để nhận tư vấn và đặt hàng sớm nhất!
+            </p>
+
+            <a href="https://m.me/100571501815980" class="cta-button">
+                <i class="fab fa-facebook-messenger cta-icon"></i>
+                INBOX NGAY CHO CHÚNG TÔI
+            </a>
+
+            <p style="margin-top:25px; font-size:18px; color:#ffccff;">
+                <i class="fas fa-bolt"></i> Phản hồi trong 3 phút - Giao hàng toàn Nhật Bản
+            </p>
+        </section>
+        <!-- Đánh giá khách hàng -->
+        <section class="rating-section">
+            <div class="rating-header">
+                <div class="rating-info">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="rating-score">4.8</div>
+                    <div class="rating-total">/5 (15.5k đánh giá)</div>
+                </div>
+                <div class="sold-count">
+                    <i class="fas fa-shopping-bag"></i> Đã bán 148.5K
+                </div>
+            </div>
+
+            <div class="reviews-section">
+                <h3 class="reviews-title">KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</h3>
+
+                <div class="review-list">
+                    <!-- Review 1 -->
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="review-avatar">TM</div>
+                            <div class="review-name">Trần Minh</div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">"Hộp quà Valentine thật sự quá đẹp và ý nghĩa! Bạn gái tôi đã khóc vì
+                            hạnh phúc khi nhận được. Chất lượng sản phẩm tuyệt vời, đóng gói cẩn thận. Sẽ ủng hộ dài
+                            dài!"</p>
+                        <div class="review-time">2 ngày trước</div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="review-avatar">LN</div>
+                            <div class="review-name">Lan Ngọc</div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">"Mình đặt set túi ví làm quà Valentine cho chồng sắp cưới. Anh ấy rất
+                            thích! Thiết kế sang trọng, chất liệu tốt, giá cả hợp lý. Đặc biệt ship siêu nhanh, đúng
+                            ngày Valentine luôn!"</p>
+                        <div class="review-time">1 tuần trước</div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="review-avatar">KH</div>
+                            <div class="review-name">Khánh Huyền</div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">"Lần đầu tiên mua quà Valentine online mà hài lòng tuyệt đối! Set chuyện
+                            vòng tay đẹp hơn ảnh, có kèm thiệp hand-made rất dễ thương. Bạn trai mình đeo không thèm
+                            tháo luôn ^^"</p>
+                        <div class="review-time">3 ngày trước</div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="review-avatar">DA</div>
+                            <div class="review-name">Đức Anh</div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">"Đặt 2 set quà cho vợ và mẹ. Cả hai đều thích! Chất lượng đúng như mô tả,
+                            đóng gói cẩn thận, giao hàng đúng hẹn. Nhân viên tư vấn nhiệt tình. Chỉ trừ 0.5 sao vì mong
+                            có nhiều mẫu mã hơn nữa!"</p>
+                        <div class="review-time">5 ngày trước</div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="review-avatar">PT</div>
+                            <div class="review-name">Phương Thảo</div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">"Valentine năm nào cũng đặt quà ở ThaiAnhP! Năm nay set quà càng đẹp và ý
+                            nghĩa hơn. Bạn trai mình xúc động lắm, nói đây là món quà Valentine ý nghĩa nhất từ trước
+                            đến giờ. Cảm ơn shop nhiều!"</p>
+                        <div class="review-time">1 ngày trước</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="text-align: center;">
+            <a href="https://m.me/100571501815980" target="_blank" class="cta-button">
+                <i class="fab fa-facebook-messenger cta-icon"></i>
+                Tư vấn ngay
+            </a>
+        </section>
+
+        <!-- Ưu đãi -->
+        <section class="promotion-section">
+            <h2 class="promotion-title">ƯU ĐÃI ĐẶC BIỆT VALENTINE 2026</h2>
+
+            <div class="promotion-list">
+                <div class="promotion-item">
+                    <div class="promotion-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="promotion-text">
+                        <strong>MIỄN PHÍ VẬN CHUYỂN</strong> - Toàn Nhật Bản cho mọi đơn hàng
+                    </div>
+                </div>
+
+                <div class="promotion-item">
+                    <div class="promotion-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="promotion-text">
+                        <strong>TẶNG KÈM THIỆP HANDMADE</strong> - Viết lời chúc theo yêu cầu
+                    </div>
+                </div>
+
+                <div class="promotion-item">
+                    <div class="promotion-icon">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <div class="promotion-text">
+                        <strong>GIẢM GIÁ ĐẾN 55%</strong> - Chỉ trong mùa Valentine 2026
+                    </div>
+                </div>
+
+                <div class="promotion-item">
+                    <div class="promotion-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="promotion-text">
+                        <strong>BẢO HÀNH 12 THÁNG</strong> - Cho tất cả sản phẩm
+                    </div>
+                </div>
+
+                <div class="promotion-item">
+                    <div class="promotion-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="promotion-text">
+                        <strong>HỘP QUÀ CAO CẤP</strong> - Thiết kế riêng cho Valentine 2026
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-logo">THAIANHP</div>
+            <p class="footer-text">Chuyên cung cấp quà tặng cao cấp tại Nhật Bản. Mang đến những món quà ý nghĩa cho
+                những khoảnh khắc đặc biệt trong cuộc sống.</p>
+
+            <div class="contact-info">
+                <div class="contact-title">THÔNG TIN LIÊN HỆ</div>
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i> Địa chỉ: Tokyo, Nhật Bản
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone-alt"></i> Hotline: +81 80-1234-5678
+                </div>
+                <div class="contact-detail">
+                    <i class="fab fa-facebook-messenger"></i> Messenger: m.me/100571501815980
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://facebook.com" class="social-icon" style="--delay:1">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" class="social-icon" style="--delay:2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://m.me/100571501815980" class="social-icon" style="--delay:3">
+                    <i class="fab fa-facebook-messenger"></i>
+                </a>
+                <a href="https://tiktok.com" class="social-icon" style="--delay:4">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+
+            <div class="copyright">
+                © 2026 THAIANHP - Quà Tặng Valentine Cao Cấp. Mọi quyền được bảo lưu.<br>
+                Valentine 2026 - Trao gửi yêu thương đích thực
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Tạo hiệu ứng trái tim bay
+        document.addEventListener('DOMContentLoaded', function () {
+            const heartsContainer = document.getElementById('hearts-container');
+            const heartCount = 25;
+
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤';
+
+                // Vị trí ngẫu nhiên
+                const left = Math.random() * 100;
+                const top = Math.random() * 100;
+                const size = Math.random() * 25 + 20;
+                const duration = Math.random() * 15 + 15;
+                const delay = Math.random() * 10;
+
+                heart.style.left = `${left}%`;
+                heart.style.top = `${top}%`;
+                heart.style.fontSize = `${size}px`;
+                heart.style.animationDuration = `${duration}s`;
+                heart.style.animationDelay = `${delay}s`;
+
+                // Màu sắc ngẫu nhiên
+                const colors = [
+                    'rgba(255, 0, 100, 0.7)',
+                    'rgba(255, 140, 0, 0.7)',
+                    'rgba(58, 12, 163, 0.7)',
+                    'rgba(114, 9, 183, 0.7)'
+                ];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                heart.style.color = color;
+
+                heartsContainer.appendChild(heart);
+            }
+
+            // Countdown Timer - 1 giờ
+            let countdownTime = 60 * 60; // 1 giờ tính bằng giây
+
+            function updateCountdown() {
+                const hours = Math.floor(countdownTime / 3600);
+                const minutes = Math.floor((countdownTime % 3600) / 60);
+                const seconds = countdownTime % 60;
+
+                // Cập nhật countdown chính
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+                // Cập nhật countdown fixed
+                document.getElementById('fixed-hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('fixed-minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('fixed-seconds').textContent = seconds.toString().padStart(2, '0');
+
+                // Hiệu ứng flash cho giây cuối
+                if (countdownTime <= 300) { // 5 phút cuối
+                    document.getElementById('seconds').style.animation = 'countdownFlash 0.5s infinite';
+                    document.getElementById('fixed-seconds').style.animation = 'countdownFlash 0.5s infinite';
+                }
+
+                // Khi countdown kết thúc
+                if (countdownTime <= 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById('countdown').innerHTML = '<div style="color:#ff0064; font-size:32px; font-weight:900;">KHUYẾN MÃI ĐÃ KẾT THÚC!</div>';
+                    document.getElementById('fixed-countdown').innerHTML = '<div style="color:white; font-weight:900; font-size:18px; text-align:center; width:100%; padding:15px; background:#ff0064;">KHUYẾN MÃI ĐÃ KẾT THÚC!</div>';
+                } else {
+                    countdownTime--;
+                }
+            }
+
+            // Cập nhật countdown mỗi giây
+            updateCountdown();
+            const countdownInterval = setInterval(updateCountdown, 1000);
+
+            // Hiệu ứng cho các section khi cuộn
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+
+            // Quan sát tất cả các section
+            document.querySelectorAll('.rating-section, .cta-section, .countdown-section, .gallery-section, .promotion-section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Hiệu ứng mạnh khi nhấn vào nút CTA
+            document.querySelectorAll('.btn-inbox-hero, .cta-button, .messenger-button').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    // Tạo hiệu ứng rung mạnh hơn
+                    this.style.animation = 'superShake 0.3s ease-in-out, extremePulse 0.3s ease-in-out';
+
+                    // Thêm hiệu ứng trái tim bung tỏa
+                    for (let i = 0; i < 20; i++) {
+                        setTimeout(() => {
+                            const heart = document.createElement('div');
+                            heart.innerHTML = '❤';
+                            heart.style.position = 'fixed';
+                            heart.style.fontSize = `${Math.random() * 30 + 20}px`;
+                            heart.style.color = ['#ff0064', '#ff8c00', '#ffd700'][Math.floor(Math.random() * 3)];
+                            heart.style.pointerEvents = 'none';
+                            heart.style.zIndex = '10000';
+                            heart.style.left = `${e.clientX - 20}px`;
+                            heart.style.top = `${e.clientY - 20}px`;
+                            heart.style.animation = `float ${Math.random() * 2 + 1}s ease-out forwards`;
+
+                            document.body.appendChild(heart);
+
+                            setTimeout(() => {
+                                heart.remove();
+                            }, 2000);
+                        }, i * 30);
+                    }
+
+                    // Reset animation sau 0.5 giây
+                    setTimeout(() => {
+                        if (this.classList.contains('messenger-button')) {
+                            this.style.animation = 'bounce 2s infinite, pulseGlow 3s infinite';
+                        } else {
+                            this.style.animation = 'superShake 0.7s infinite alternate, extremePulse 1.5s infinite';
+                        }
+                    }, 500);
+                });
+            });
+
+            // Hiệu ứng hover cho gallery items
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('mouseenter', function () {
+                    this.style.transform = 'scale(1.15) rotate(5deg)';
+                    this.style.zIndex = '100';
+                });
+
+                item.addEventListener('mouseleave', function () {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                    setTimeout(() => {
+                        this.style.zIndex = '1';
+                    }, 300);
+                });
+            });
+
+            // Hiệu ứng cho tiêu đề chính
+            const mainTitle = document.querySelector('.valentine-title');
+            setInterval(() => {
+                mainTitle.style.animation = 'none';
+                setTimeout(() => {
+                    mainTitle.style.animation = 'float 6s infinite ease-in-out';
+                }, 10);
+            }, 6000);
+
+            // Thông báo số lượng giới hạn
+            setTimeout(() => {
+                const notification = document.createElement('div');
+                notification.innerHTML = `
+                    <div style="position:fixed; top:15px; right:15px; left:15px; background:linear-gradient(135deg, #ff0064, #ff8c00); color:white; padding:20px; border-radius:20px; box-shadow:0 15px 40px rgba(255,0,100,0.8); z-index:10000; animation:slideInLeft 0.7s ease-out; text-align:center; font-weight:900; font-size:20px; border:3px solid white; text-transform:uppercase; letter-spacing:1px;">
+                        <i class="fas fa-fire" style="margin-right:15px; animation:blink 1s infinite;"></i> CHỈ CÒN 99 SET VALENTINE GIỚI HẠN - INBOX NGAY!
+                    </div>
+                `;
+                document.body.appendChild(notification);
+
+                setTimeout(() => {
+                    notification.style.animation = 'slideInRight 0.7s ease-out forwards';
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 700);
+                }, 5000);
+            }, 2000);
+
+            // Animation vĩnh viễn cho các button
+            setInterval(() => {
+                // Tăng cường animation cho button hero
+                const heroBtn = document.querySelector('.btn-inbox-hero');
+                heroBtn.style.animation = 'superShake 0.5s infinite alternate, extremePulse 1s infinite';
+
+                setTimeout(() => {
+                    heroBtn.style.animation = 'superShake 0.8s infinite alternate, extremePulse 2s infinite';
+                }, 500);
+
+                // Tăng cường animation cho button CTA
+                const ctaBtn = document.querySelector('.cta-button');
+                ctaBtn.style.animation = 'superShake 0.4s infinite alternate, extremePulse 0.8s infinite';
+
+                setTimeout(() => {
+                    ctaBtn.style.animation = 'superShake 0.7s infinite alternate, extremePulse 1.5s infinite';
+                }, 400);
+
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>
