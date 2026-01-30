@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Quà Valentine 2026 Cao Cấp | Quà Tặng Nhật Bản | THAIANHP</title>
+    <title>Quà Valentine 2026 Cao Cấp | Quà Tặng Nhật Bản | THAIANHJP</title>
     <meta name="description" content="Set quà Valentine 2026 cao cấp từ Nhật Bản. Quà tặng ý nghĩa cho người thương, thiết kế độc quyền, chất lượng cao. Đặt hàng ngay!">
-    <meta name="keywords" content="quà Valentine 2026, quà tặng Valentine, quà Valentine Nhật Bản, set quà Valentine, quà tặng cao cấp, Valentine 2026, quà tặng người yêu, ThaiAnhP">
-    <meta name="author" content="THAIANHP">
+    <meta name="keywords" content="quà Valentine 2026, quà tặng Valentine, quà Valentine Nhật Bản, set quà Valentine, quà tặng cao cấp, Valentine 2026, quà tặng người yêu, ThaiAnhJP">
+    <meta name="author" content="THAIANHJP">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
-    <meta property="og:title" content="Quà Valentine 2026 Cao Cấp | THAIANHP">
+    <meta property="og:title" content="Quà Valentine 2026 Cao Cấp | THAIANHJP">
     <meta property="og:image" content="/images/7.png">
     <meta property="og:description" content="Set quà Valentine 2026 cao cấp từ Nhật Bản - Quà tặng ý nghĩa cho người thương">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="vi_VN">
-    <meta property="og:site_name" content="THAIANHP">
+    <meta property="og:site_name" content="THAIANHJP">
     <link rel="canonical" href="https://thai-anh.jp/valentine-2026">
     <link rel="icon" type="image/png" href="/images/shop-logo.jpg">
     <link rel="apple-touch-icon" href="/images/shop-logo.jpg">
@@ -32,7 +32,7 @@
         "description": "Set quà Valentine 2026 cao cấp được thiết kế riêng tại Nhật Bản, quà tặng ý nghĩa cho người thương",
         "brand": {
             "@type": "Brand",
-            "name": "THAIANHP"
+            "name": "THAIANHJP"
         },
         "offers": {
             "@type": "Offer",
@@ -1191,6 +1191,136 @@
             animation: float 10s infinite linear;
         }
 
+        /* ====== PHẦN STYLE MỚI CHO VIDEO ====== */
+        /* Video Section */
+        .video-section {
+            margin: 40px 15px;
+            animation: fadeIn 1s ease-out 1.1s both;
+        }
+
+        .video-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #ffccff;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .video-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff0064, #ff8c00);
+            animation: shimmer 2s infinite linear;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .video-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+            /* animation: float 8s infinite ease-in-out; */
+            /* animation-delay: calc(var(--delay) * 0.7s); */
+            height: 320px;
+            background: rgba(20, 0, 40, 0.9);
+            border: 3px solid rgba(255, 0, 100, 0.3);
+        }
+
+        .video-item:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 20px 50px rgba(255, 0, 100, 0.9);
+            z-index: 10;
+            border-color: rgba(255, 0, 100, 0.8);
+        }
+
+        .video-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .video-player {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(255, 0, 100, 0.2));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            color: white;
+            padding: 25px 15px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .video-item:hover .video-overlay {
+            opacity: 1;
+        }
+
+        .video-overlay-title {
+            font-weight: 900;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+            color: #ffd700;
+        }
+
+        .video-overlay-text {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #ffccff;
+        }
+
+        .video-play-button {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff0064, #ff8c00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(255, 0, 100, 0.7);
+            transition: all 0.3s ease;
+            animation: heartbeat 2s infinite;
+        }
+
+        .video-play-button:hover {
+            transform: scale(1.2);
+            box-shadow: 0 15px 35px rgba(255, 0, 100, 1);
+        }
+
         /* Responsive */
         @media (max-width: 480px) {
             .container {
@@ -1255,6 +1385,23 @@
                 bottom: 80px;
                 right: 15px;
             }
+
+            /* Responsive cho video */
+            .video-item {
+                height: 280px;
+            }
+
+            .video-overlay {
+                padding: 20px 10px;
+            }
+
+            .video-overlay-title {
+                font-size: 18px;
+            }
+
+            .video-overlay-text {
+                font-size: 14px;
+            }
         }
 
         @media (max-width: 350px) {
@@ -1290,6 +1437,15 @@
                 height: 50px;
                 font-size: 28px;
                 bottom: 70px;
+            }
+
+            /* Responsive cho video */
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-item {
+                height: 250px;
             }
         }
     </style>
@@ -1328,7 +1484,7 @@
         <!-- Header với background image -->
         <header class="header">
             <div class="header-content">
-                <div class="logo">THAIANHP</div>
+                <div class="logo">THAIANHJP</div>
                 <div class="sub-logo">QUÀ TẶNG TẠI NHẬT BẢN</div>
                 <h1 class="valentine-title">Valentine 2026</h1>
                 <div class="year">2026</div>
@@ -1355,8 +1511,6 @@
             </a>
         </div>
 
-
-
         <!-- Gallery ảnh sản phẩm - 10 ảnh với background image -->
         <section class="gallery-section">
             <h2 class="gallery-title">BỘ SƯU TẬP VALENTINE 2026</h2>
@@ -1376,16 +1530,6 @@
                     <img src="/images/Artboard 5 copy@2x-100.jpg" alt="SET Dây chuyền vòng tay 2" class="gallery-img">
                     <div class="gallery-overlay">SET Dây chuyền vòng tay 2</div>
                 </div>
-                <!-- <div class="gallery-item" style="--delay:3">
-                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Hộp quà sang trọng" class="gallery-img">
-                    <div class="gallery-overlay">HỘP QUÀ SANG TRỌNG</div>
-                </div>
-                <div class="gallery-item" style="--delay:4">
-                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Set trang sức" class="gallery-img">
-                    <div class="gallery-overlay">SET TRANG SỨC</div>
-                </div> -->
-
-                <!-- Ảnh 5: ảnh lớn 1 dòng -->
 
                 <!-- Ảnh 6: ảnh lớn 1 dòng -->
                 <div class="gallery-item gallery-single" style="--delay:6">
@@ -1424,6 +1568,96 @@
                 </div>
             </div>
         </section>
+
+        <!-- ====== PHẦN VIDEO MỚI ====== -->
+        <section class="video-section">
+            <h2 class="video-title">VIDEO SẢN PHẨM THỰC TẾ</h2>
+            <p style="text-align:center; color:#ffccff; margin-bottom:30px; font-size:18px;">Xem trực tiếp chất lượng,
+                thiết kế và trải nghiệm mở hộp sản phẩm Valentine 2026</p>
+
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-item" style="--delay:1">
+                    <div class="video-container">
+                        <!-- THAY THẾ URL EMBED DƯỚI ĐÂY -->
+                        <iframe class="video-player" src="https://www.youtube.com/embed/SazTUeV7_tw"
+                            title="Video sản phẩm Valentine 1" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <!-- <div class="video-overlay">
+                            <div class="video-overlay-title">MỞ HỘP SET TÚI VÍ</div>
+                            <div class="video-overlay-text">Trải nghiệm mở hộp set túi ví cao cấp với thiết kế độc quyền
+                                Valentine 2026</div>
+                            <a href="https://www.youtube.com/shorts/SazTUeV7_tw" target="_blank" class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-item" style="--delay:2">
+                    <div class="video-container">
+                        <!-- THAY THẾ URL EMBED DƯỚI ĐÂY -->
+                        <iframe class="video-player" src="https://www.youtube.com/embed/lPlkxEEihHo"
+                            title="Video sản phẩm Valentine 2" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <!-- <div class="video-overlay">
+                            <div class="video-overlay-title">CHI TIẾT DÂY CHUYỀN</div>
+                            <div class="video-overlay-text">Khám phá từng chi tiết tinh xảo trên dây chuyền cao cấp trong
+                                bộ sưu tập</div>
+                            <a href="https://www.youtube.com/shorts/lPlkxEEihHo" target="_blank" class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-item" style="--delay:3">
+                    <div class="video-container">
+                        <!-- THAY THẾ URL EMBED DƯỚI ĐÂY -->
+                        <iframe class="video-player" src="https://www.youtube.com/embed/J9afC-aOF78"
+                            title="Video sản phẩm Valentine 3" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <!-- <div class="video-overlay">
+                            <div class="video-overlay-title">TRẢI NGHIỆM VÒNG TAY</div>
+                            <div class="video-overlay-text">Cảm nhận chất liệu và độ hoàn thiện của vòng tay thiết kế
+                                riêng cho Valentine</div>
+                            <a href="https://www.youtube.com/shorts/J9afC-aOF78" target="_blank" class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="video-item" style="">
+                    <div class="video-container">
+                        <!-- THAY THẾ URL EMBED DƯỚI ĐÂY -->
+                        <iframe class="video-player" src="https://www.youtube.com/embed/FETQCd9b8PE"
+                            title="Video sản phẩm Valentine 4" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <!-- <div class="video-overlay">
+                            <div class="video-overlay-title">TỔNG QUAN BỘ SƯU TẬP</div>
+                            <div class="video-overlay-text">Tổng hợp tất cả sản phẩm trong set quà Valentine 2026 độc
+                                quyền</div>
+                            <a href="https://www.youtube.com/shorts/FETQCd9b8PE" target="_blank" class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <p style="text-align:center; margin-top:25px; color:#ff99cc; font-size:17px;">
+                <i class="fas fa-video"></i> Video trực tiếp từ showroom - Chất lượng hình ảnh 4K
+            </p>
+        </section>
+
         <!-- Countdown khuyến mãi 1 tiếng -->
         <section class="countdown-section">
             <h2 class="countdown-title">KHUYẾN MÃI KẾT THÚC TRONG</h2>
@@ -1449,6 +1683,7 @@
                 <i class="fas fa-exclamation-triangle"></i> Chỉ còn 99 set cuối cùng với giá ưu đãi
             </p>
         </section>
+
         <!-- Nút Inbox với animation mạnh -->
         <section class="cta-section">
             <h2 class="cta-title">ĐỪNG BỎ LỠ CƠ HỘI!</h2>
@@ -1464,6 +1699,7 @@
                 <i class="fas fa-bolt"></i> Phản hồi trong 3 phút - Giao hàng toàn Nhật Bản
             </p>
         </section>
+
         <!-- Đánh giá khách hàng -->
         <section class="rating-section">
             <div class="rating-header">
@@ -1576,7 +1812,7 @@
                                 <i class="fas fa-star"></i>
                             </div>
                         </div>
-                        <p class="review-text">"Valentine năm nào cũng đặt quà ở ThaiAnhP! Năm nay set quà càng đẹp và ý
+                        <p class="review-text">"Valentine năm nào cũng đặt quà ở ThaiAnhJP! Năm nay set quà càng đẹp và ý
                             nghĩa hơn. Bạn trai mình xúc động lắm, nói đây là món quà Valentine ý nghĩa nhất từ trước
                             đến giờ. Cảm ơn shop nhiều!"</p>
                         <div class="review-time">1 ngày trước</div>
@@ -1646,7 +1882,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="footer-logo">THAIANHP</div>
+            <div class="footer-logo">THAIANHJP</div>
             <p class="footer-text">Chuyên cung cấp quà tặng cao cấp tại Nhật Bản. Mang đến những món quà ý nghĩa cho
                 những khoảnh khắc đặc biệt trong cuộc sống.</p>
 
@@ -1679,7 +1915,7 @@
             </div>
 
             <div class="copyright">
-                © 2026 THAIANHP - Quà Tặng Valentine Cao Cấp. Mọi quyền được bảo lưu.<br>
+                © 2026 THAIANHJP - Quà Tặng Valentine Cao Cấp. Mọi quyền được bảo lưu.<br>
                 Valentine 2026 - Trao gửi yêu thương đích thực
             </div>
         </footer>
@@ -1774,13 +2010,13 @@
                 });
             }, observerOptions);
 
-            // Quan sát tất cả các section
-            document.querySelectorAll('.rating-section, .cta-section, .countdown-section, .gallery-section, .promotion-section').forEach(section => {
+            // Quan sát tất cả các section (thêm video-section)
+            document.querySelectorAll('.rating-section, .cta-section, .countdown-section, .gallery-section, .promotion-section, .video-section').forEach(section => {
                 observer.observe(section);
             });
 
             // Hiệu ứng mạnh khi nhấn vào nút CTA
-            document.querySelectorAll('.btn-inbox-hero, .cta-button, .messenger-button').forEach(button => {
+            document.querySelectorAll('.btn-inbox-hero, .cta-button, .messenger-button, .video-play-button').forEach(button => {
                 button.addEventListener('click', function (e) {
                     // Tạo hiệu ứng rung mạnh hơn
                     this.style.animation = 'superShake 0.3s ease-in-out, extremePulse 0.3s ease-in-out';
@@ -1811,6 +2047,8 @@
                     setTimeout(() => {
                         if (this.classList.contains('messenger-button')) {
                             this.style.animation = 'bounce 2s infinite, pulseGlow 3s infinite';
+                        } else if (this.classList.contains('video-play-button')) {
+                            this.style.animation = 'heartbeat 2s infinite';
                         } else {
                             this.style.animation = 'superShake 0.7s infinite alternate, extremePulse 1.5s infinite';
                         }
@@ -1829,6 +2067,21 @@
                     this.style.transform = 'scale(1) rotate(0deg)';
                     setTimeout(() => {
                         this.style.zIndex = '1';
+                    }, 300);
+                });
+            });
+
+            // Hiệu ứng hover cho video items
+            document.querySelectorAll('.video-item').forEach(item => {
+                item.addEventListener('mouseenter', function () {
+                    this.style.transform = 'scale(1.05) rotate(2deg)';
+                    this.style.zIndex = '100';
+                });
+
+                item.addEventListener('mouseleave', function () {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                    setTimeout(() => {
+                        this.style.zIndex = '10';
                     }, 300);
                 });
             });
@@ -1882,5 +2135,4 @@
         });
     </script>
 </body>
-
 </html>
